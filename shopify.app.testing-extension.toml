@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "7554ce88b349ee1cb4ba8283a68724ba"
+name = "testing-extension"
+handle = "testing-extension-12"
+application_url = "https://sustainability-framework-put-requiring.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "tanya-soni.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = ""
+
+[auth]
+redirect_urls = [
+  "https://sustainability-framework-put-requiring.trycloudflare.com/auth/callback",
+  "https://sustainability-framework-put-requiring.trycloudflare.com/auth/shopify/callback",
+  "https://sustainability-framework-put-requiring.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+[pos]
+embedded = false

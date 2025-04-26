@@ -1,0 +1,32 @@
+api_version = "2024-07"
+
+[capabilities]
+api_access = true
+network_access = true
+
+
+[[extensions]]
+type = "ui_extension"
+name = "MM2 Checkout"
+handle = "mm2-checkout"
+
+  [extensions.settings]
+    [[extensions.settings.fields]]
+        key = "url"
+        type = "single_line_text_field"
+        name = "Url"
+        description = "Enter Button Redriection Url"
+    
+[extensions.capabilities]
+api_access = true
+network_access = true
+
+[[extensions.targeting]]
+target = "purchase.thank-you.block.render"
+module = "./src/Checkout.jsx"
+export = "thankYouBlock"
+
+[[extensions.targeting]]
+target = "customer-account.order-status.block.render"
+module = "./src/Checkout.jsx"
+export = "orderDetailsBlock"

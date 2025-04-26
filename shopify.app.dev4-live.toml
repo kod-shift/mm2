@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "b9023005d86c4b478214129e571f9ee7"
+name = "MM2 Checkout"
+handle = "mm2-checkout-1"
+application_url = "https://mm2-shopify-app.onrender.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "testtakewithfood.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "customer_read_draft_orders,customer_read_markets,customer_read_orders,customer_read_store_credit_accounts,customer_write_customers,unauthenticated_read_customer_tags,unauthenticated_write_checkouts,unauthenticated_write_customers,write_cart_transforms,write_customers,write_draft_orders,write_orders"
+
+[auth]
+redirect_urls = [
+  "https://mm2-shopify-app.onrender.com/auth/callback",
+  "https://mm2-shopify-app.onrender.com/auth/shopify/callback",
+  "https://mm2-shopify-app.onrender.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2025-01"
+
+[pos]
+embedded = false
